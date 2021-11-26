@@ -81,4 +81,19 @@
   ```
   
   
-* 
+* Install Webgate on OHS instance
+
+  ```
+  [oracle@zywg01s bin]$ cd /u01/oracle/Middleware/Oracle_Home/webgate/ohs/tools/deployWebGate/
+  [oracle@zywg01s deployWebGate]$ ./deployWebGateInstance.sh -w /u01/oracle/Middleware/Oracle_Home/user_projects/domains/WebGate_OHS/config/fmwconfig/components
+  /OHS/ohs2 -oh /u01/oracle/Middleware/Oracle_Home
+  Copying files from WebGate Oracle Home to WebGate Instancedir
+  
+  [oracle@zywg01s deployWebGate]$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/u01/oracle/Middleware/Oracle_Home/lib/
+  [oracle@zywg01s deployWebGate]$ cd /u01/oracle/Middleware/Oracle_Home/webgate/ohs/tools/setup/InstallTools
+  
+  [oracle@zywg01s InstallTools]$ ./EditHttpConf -w /u01/oracle/Middleware/Oracle_Home/user_projects/domains/WebGate_OHS/config/fmwconfig/components/OHS/ohs2 -oh /u01/oracle/Middleware/Oracle_Home  -o webgate.conf
+  The web server configuration file was successfully updated
+  /u01/oracle/Middleware/Oracle_Home/user_projects/domains/WebGate_OHS/config/fmwconfig/components/OHS/ohs2/httpd.conf has been backed up as /u01/oracle/Middleware/Oracle_Home/user_projects/domains/WebGate_OHS/config/fmwconfig/components/OHS/ohs2/httpd.conf.ORIG
+  ```
+  

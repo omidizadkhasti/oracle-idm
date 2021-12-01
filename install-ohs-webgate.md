@@ -120,7 +120,7 @@
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setListenAddress('zywg01s.test.oci.tafenswtest.edu.au')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setListenPort('8100')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setSSLListenPort('8101')
- wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setServerName('http://zywg01s.test.oci.tafenswtest.edu.au:8070')
+ wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setServerName('http://zywg01s.test.oci.tafenswtest.edu.au:8100')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cd("/")
  wls:/offline/WebGate_OHS>create("ohs_int", 'SystemComponent')
  Proxy for ohs_int: Name=ohs_int, Type=SystemComponent
@@ -133,7 +133,7 @@
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setListenAddress('zywg01s.test.oci.tafenswtest.edu.au')
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setListenPort('8200')
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setSSLListenPort('8201')
- wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setServerName('http://zywg01s.test.oci.tafenswtest.edu.au:8060')
+ wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setServerName('http://zywg01s.test.oci.tafenswtest.edu.au:8200')
  wls:/offline/WebGate_OHS/OHS/ohs_int>updateDomain()
  wls:/offline/WebGate_OHS/OHS/ohs_int>exit()
  ```

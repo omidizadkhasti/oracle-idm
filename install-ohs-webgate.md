@@ -99,6 +99,14 @@
   
 * Create staff and int instances
  ```
+ sudo firewall-cmd --zone=public --list-ports
+ sudo firewall-cmd --permanent --zone=public --add-port=8100-8101/tcp
+ sudo firewall-cmd --permanent --zone=public --add-port=8200-8201/tcp
+ sudo firewall-cmd --reload
+ sudo firewall-cmd --zone=public --list-ports
+ 5901/tcp 8080/tcp 8090/tcp 8100-8101/tcp 8200-8201/tcp
+ 
+ 
  wls:/offline> readDomain("/u01/oracle/Middleware/Oracle_Home/user_projects/domains/WebGate_OHS/")
  wls:/offline/WebGate_OHS>cd("/")
  wls:/offline/WebGate_OHS>create("ohs_staff", 'SystemComponent')
@@ -110,8 +118,8 @@
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setAdminHost('127.0.0.1')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setAdminPort('9997')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setListenAddress('zywg01s.test.oci.tafenswtest.edu.au')
- wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setListenPort('8070')
- wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setSSLListenPort('8071')
+ wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setListenPort('8100')
+ wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setSSLListenPort('8101')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cmo.setServerName('http://zywg01s.test.oci.tafenswtest.edu.au:8070')
  wls:/offline/WebGate_OHS/OHS/ohs_staff>cd("/")
  wls:/offline/WebGate_OHS>create("ohs_int", 'SystemComponent')
@@ -123,8 +131,8 @@
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setAdminHost('127.0.0.1')
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setAdminPort('9996')
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setListenAddress('zywg01s.test.oci.tafenswtest.edu.au')
- wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setListenPort('8060')
- wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setSSLListenPort('8061')
+ wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setListenPort('8200')
+ wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setSSLListenPort('8201')
  wls:/offline/WebGate_OHS/OHS/ohs_int>cmo.setServerName('http://zywg01s.test.oci.tafenswtest.edu.au:8060')
  wls:/offline/WebGate_OHS/OHS/ohs_int>updateDomain()
  wls:/offline/WebGate_OHS/OHS/ohs_int>exit()
